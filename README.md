@@ -1,10 +1,10 @@
 # 2018-hdu-multi
 2018 HDU Multi-University Training Contest
 
-statements
+1.statements
 
-solution
+2.solution
 
-data
+3.data
 
-std
+4.std
