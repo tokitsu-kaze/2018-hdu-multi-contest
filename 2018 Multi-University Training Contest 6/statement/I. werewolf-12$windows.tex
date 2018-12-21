@@ -1,0 +1,64 @@
+\begin{problem}{Werewolf}{standard input}{standard output}{1 second}{256 megabytes}
+
+"The Werewolves" is a popular card game among young people.In the basic game, there are 2 different groups: the werewolves and the villagers.
+
+Each player will debate a player they think is a werewolf or not. 
+
+Their words are like "Player x is a werewolf." or "Player x is a villager.".
+
+What we know is :
+
+1. Villager won't lie.
+
+2. Werewolf may lie. 
+
+Of cause we only consider those situations which obey the two rules above. 
+
+It is guaranteed that input data exist at least one situation which obey the two rules above.
+
+Now we can judge every player into 3 types :
+
+1. A player which can only be villager among all situations, 
+
+2. A player which can only be werewolf among all situations.
+
+3. A player which can be villager among some situations, while can be werewolf in others situations.
+
+You just need to print out the number of type-1 players and the number of type-2 players. 
+
+No player will talk about himself.
+
+\InputFile
+The first line of the input gives the number of test cases T.Then T test cases follow.
+
+The first line of each test case contains an integer N,indicating the number of players.
+
+Then follows N lines,i-th line contains an integer x and a string S,indicating the i-th players tell you,"Player x is a S."
+
+limits:
+
+$ 1 \leq T \leq 10 $
+
+$ 1 \leq N \leq 100,000 $
+
+$ 1 \leq x \leq N $
+
+$ S \in $ {"villager"."werewolf"}
+
+\OutputFile
+
+For each test case,print the number of type-1 players and the number of type-2 players in one line,  separated by white space.
+
+\Example
+
+\begin{example}
+\exmp{1
+2
+2 werewolf
+1 werewolf
+}{0 0
+}%
+\end{example}
+
+\end{problem}
+

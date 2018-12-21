@@ -1,0 +1,45 @@
+\begin{problem}{Ringland}{standard input}{standard output}{3 seconds}{128 megabytes}
+
+Patrick Star found the Ringland! It's marriage season in Ringland!
+
+Ringland has a form of a circle's boundary of length $L$.
+
+There are $N$ bridegrooms and $N$ brides, and bridegrooms decided to marry brides.
+
+Of course, each bridegroom should choose exactly one bride, and each bride should be chosen by exactly one bridegroom.
+
+All objects in Ringland are located on the boundary of the circle, including the capital, bridegrooms' castles and brides' palaces. The castle of the i-th bridegroom is located at the distance $a_i$ from the capital in clockwise direction, and the palace of the i-th bride is located at the distance $b_i$ from the capital in clockwise direction.
+
+Let's define the inconvenience of a marriage the summary distance of every bride should walk along the circle from her palace to her bridegroom's castle in the shortest direction (in clockwise or counter-clockwise direction).
+
+Help Patrick Star to calculate the smallest inconvenience among all marriages !
+
+\InputFile
+The first line contain a integer $T$ (no morn than 10), the following is $T$ test case, for each test case :
+
+The first line contains two integers $N$ and $L$ ($1 \le N \le 5 * 10^5, 1\le L \le 10^9$) --- the number of bridegrooms and brides and the length of Ringland.
+
+The next line contains $N$ integers, $a_1, a_2, ..., a_n$ ($0 \le a_1 \le a_2 \le ... \le a_n < L$) --- the distances from the capital to the castles of bridegrooms in clockwise direction.
+
+The next line contains $N$ integers, $b_1, b_2, ..., b_n$ ($0 \le b_1 \le b_2 \le ... \le b_n < L$) --- the distances from the capital to the palaces of brides in clockwise direction.
+
+Attention: you may need fast read function.
+
+\OutputFile
+For each test case print one line,
+
+This line contain only one integer, the smallest possible inconvenience of the wedding.
+
+\Example
+
+\begin{example}
+\exmp{1
+2 5
+3 4
+0 2
+}{2
+}%
+\end{example}
+
+\end{problem}
+

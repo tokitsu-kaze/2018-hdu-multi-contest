@@ -1,0 +1,81 @@
+\begin{problem}{black-and-white}{standard input}{standard output}{12 seconds}{256 megabytes}
+
+Patrick Star found a world consist of N * N girds. Every gird is either black or write.
+
+If one black gird $a$ is not "reachable" from another one black gird $b$, we said that the pair of $(a, b)$ is "special pair" ! What's more, Patrick Star regards the score of this pair as the Manhattan Distance between the two girds.
+
+For every two girds, if there exist an path begin from one and end at another one, also this path consists only black girds and turns at most once, then the two girds are "reachable" from each other.
+
+For better understanding of possible paths, every pair of gird (a, b) has only two possible paths while ignore the other limits, marked by \#, and both paths include "a" and "b".
+
+
+========
+
+=a#####=
+
+=#====#=
+
+=#####b=
+
+
+And see the text-picture below to get better understanding about 'reachable', we use "1" to stand for black gird and "0" to the white.
+
+11111111
+
+10110000
+
+10011110
+
+11111111
+
+pair of [(2, 4), (4, 8)] : reachable. by path (2, 4) -> (4, 4) -> (4, 8).
+
+pair of [(1, 5), (4, 8)] : not reachable, Manhattan Distance is |1 - 4| + |5 - 8| = 6.
+
+pair of [(1, 5), (4, 4)] : reachable. by path (1, 5) -> (1, 4) -> (4, 4).
+
+pair of [(1, 5), (4, 3)] : not reachable, Manhattan Distance is |1 - 4| + |5 - 3| = 5.
+...
+
+
+Now Patrick Star wants to know the max score among all special pairs.
+
+If there is not any special pair , just output "Opps!".
+
+Moreover, assume that the maximum score described above is $D$ (if exist), Patrick Star wants know how many special pair has score of $D$. (unordered, that is to say $pair(a, b)$ is the same as $pair(b, a)$).
+
+It is guaranteed that the two answers no more than 2147483647.
+ 
+
+\InputFile
+The first line contain a integer $T$(no more than 10), the following is $T$ test case, for each test case:
+
+The first line contains one integers $N(1 \le N \le 2000)$.
+
+The following $N$ lines show an $N$ * $N$ girds. 
+
+each line contain a string of length $N$ consist of "0" or "1" which mean "white" or "black"
+
+
+\OutputFile
+For each test case , output one line :
+
+1. If no exist special pair, just output "Opps!".
+
+2. Else output two integers separated by white space, the first one is the maximum score, and the second one is the number of special pairs reach the maximun score. 
+
+\Example
+
+\begin{example}
+\exmp{1
+4
+1011
+1001
+1001
+1111
+}{5 3
+}%
+\end{example}
+
+\end{problem}
+

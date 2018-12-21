@@ -1,0 +1,74 @@
+\begin{problem}{Chopping hands}{standard input}{standard output}{1 seconds}{32 megabytes}
+
+Patrick Star wants to collect some cards.The number of cards' type is $ M $,numbered from $ 1 $ to $ M $.
+
+There are $ N $ card packs in the card shop:
+
+1.The cost of $i_{th}$ card pack is $ C_{i} $, note that $ C_{i} $ may be negative.
+
+2.The number of cards in $i_{th}$ card pack is $ D_{i} $.
+
+3.The cards in all card packs are known,some types of card can appear in a pack more than once.
+
+4.All of card packs can be bought only once.
+
+Once Patrick Star gets an $ i_{th} $ type of card,he will regard $ Value_{i,j} $ as this card's value if the card is $j_{th}$ got as the $i_{th}$ type.
+
+(If you buy two packs [type 1,type 1,type 2] and [type 1,type 2,type 3],you will get value [$Value_{1,1}, Value_{1,2}, Value_{2,1}, Value_{1,3}, Value_{2,2}, Value_{3,1}]$)
+
+After Patrick Star choose some card packs bought,cost $ S $ (may be negative too):
+
+Firstly,sort all cards by their value. We will get the median of the value as $ mid $.
+
+(When the number of variables is an odd number, the value of the variable in the middle position is the median.when the number of variables is an even number, the median is the average of the 2 variable values in the middle position.)
+
+Then Patrick Star considers his satisfaction $ V $ as $ V = 2 * mid $
+
+Patrick Star wants to know the maximum value of $ V - S $.
+
+Note that Patrick Star will buy at least one pack.
+
+
+\InputFile
+The first line contain a integer $T$ (no morn than 10), the following is $T$ test case, for each test case :
+
+the first line contain two integers N and M.
+
+The second line contain N integers separated by spaces,$ C_{1},C_{2},……C_{n} $
+
+Then next N lines,the first integer of each line is $ D_{i} $,and the $ D_{i} $ integers after that represents the type of each card in i-th pack.
+
+Then next M lines,the first integer $ t_{i} $ of each line represents the number of times the i-th card appear in all packs,and the t integers after that,j-th integer represents $ Value_{i,j} $.
+
+Limits:
+
+$ 1 \leq N \leq 21 $
+
+$ 1 \leq M \leq 200 $
+
+$ -1,000,000 \leq C_{i} \leq 1,000,000 $
+
+$ 1 \leq D_{i} \leq 100 , \sum_{i=1}^{N}D_{i} \leq 100 $
+
+$ 0 \leq Value_{i,j} \leq 100,000,000 $
+
+\OutputFile
+For each test case, please output an integer in a line represented the answer.It's clear that the answer is an integer.
+
+\Example
+
+\begin{example}
+\exmp{1
+4 1
+1 2 3 4
+1 1
+1 1
+1 1
+1 1
+4 4 3 2 1
+}{7
+}%
+\end{example}
+
+\end{problem}
+

@@ -1,0 +1,41 @@
+\begin{problem}{sacul}{standard input}{standard output}{1 seconds}{32 megabytes}
+
+Patrick Star found a kind of magical matrixs, he named them $HMBB$ !!!
+
+We use $p$ to express the $c$-th prime number. 
+
+The size of $HMBB_i$ is $p^i * p^i$ ! 
+
+What is more surprising is that :
+
+1. For any $n$, the element on the i-th row j-th column $HMBB_n[i][j]$ = $(C(i, j)\ mod\ p) > 0)$ ? $1$ : $0$. 
+
+2. Where $C(i, j)$ is count of method to choose $j$ balls (unordered) from $i$ balls which are pairwise distinct.
+
+3. Note that rows and columns both count from zero.
+
+
+Patrick Star defined $F[n][k]$ the sum of all elements of $(HMBB_n)^k$, $F[n][k] = \sum_{i = 0}^{p^n-1}\sum_{j=0}^{p^n-1}HMBB_n^k[i][j]$
+
+Now Patrick wants to know $(\sum_{i=1}^n\sum_{j=1}^kF[i][j])\ mod\ (10^9 + 7)$ !
+
+\InputFile
+The first line contain a integer $T$ (no morn than 10), the following is $T$ test case, for each test case :
+
+Each line contains contains three integer c, n, k ($0 < n \le 10^9$, $0 < c, k \le 10^5$). Separated by an white space.
+
+\OutputFile
+For each test case output one line denotes the answer that Patrick Star wants to know.
+
+
+\Example
+
+\begin{example}
+\exmp{1
+1 1 1
+}{3
+}%
+\end{example}
+
+\end{problem}
+

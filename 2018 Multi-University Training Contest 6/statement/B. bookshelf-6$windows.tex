@@ -1,0 +1,43 @@
+\begin{problem}{bookshelf}{standard input}{standard output}{1 second}{64 megabytes}
+
+Patrick Star bought a bookshelf, he named it ZYG !! 
+
+Patrick Star has $N$ book .
+
+The ZYG has $K$ layers (count from $1$ to $K$) and there is no limit on the capacity of each layer !
+
+Now Patrick want to put all $N$ books on ZYG :
+
+1. Assume that the i-th layer has $cnt_i(0 \le cnt_i \le N)$ books finally.
+
+2. Assume that $f[i]$ is the i-th fibonacci number ($f[0] = 0, f[1] = 1, f[2] = 1, f[i] = f[i - 2] + f[i - 1]$). 
+
+3. Define the stable value of i-th layers $stable_i = f[cnt_i]$.
+
+4. Define the beauty value of i-th layers $beauty_i = 2^{stable_i} - 1$.
+
+5. Define the whole beauty value of ZYG $score = gcd(beauty_1, beauty_2, ..., beauty_k)$(Note: $gcd(0, x) = x$).
+
+Patrick Star wants to know the expected value of $score$ if Patrick choose a distribute method  randomly !
+
+\InputFile
+The first line contain a integer $T$ (no morn than 10), the following is $T$ test case, for each test case :
+
+Each line contains contains three integer $n, k(0 < n, k \le 10^6)$.
+
+\OutputFile
+For each test case, output the answer as a value of a rational number modulo $10^9 + 7$.
+
+Formally, it is guaranteed that under given constraints the probability is always a rational number $\frac{p}{q}$ (p and q are integer and coprime, q is positive), such that q is not divisible by $10^9 + 7$. Output such integer a between 0 and $10^9+6$ that $p-aq$ is divisible by $10^9+7$.
+
+\Example
+
+\begin{example}
+\exmp{1
+6 8
+}{797202805
+}%
+\end{example}
+
+\end{problem}
+

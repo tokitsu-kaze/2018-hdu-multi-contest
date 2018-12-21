@@ -1,0 +1,76 @@
+\begin{problem}{foam-transformation}{standard input}{standard output}{8 seconds}{256 megabytes}
+
+Operation "T" on array "a" with length at m has following description:
+
+T i k, which holds $1 \le i < m$, i,k are both integers,denotes that $a_i+=1*(-1)^k,a_{i+1}+=4*(-1)^k,..,a_{i+j}+=(j+1)^2*(-1)^k,...,a_{m}+=(m-i+1)^2*(-1)^k$.
+
+A array $a$ with length $n$ is "acid" if and only if :
+
+1. If we add $5$ zero elements at the end of $a$ (length is $n + 5$ now).
+
+2. After 1, we can use finite operation "T" on a to make a become all zero array.
+
+The "acidity" of a array "a" is the number of nonempty subintervals which is "acid".
+
+(more formally, the number of pairs (l,r) satisfying $a_{l},a_{l+1}...a_{r}$ is "acid",$1 \le l \le r \le length(a)$)  
+
+Now,you are given an integer $n$ and an array "a" consisting $n$ integers.You should maintain the "acidity" of the array dynamicly.
+
+Given an integer m, following m operations like that:
+
+U i x, denoting $a_i+=x,a_{i+1}+=x,1 \le i < n.$
+
+You should output an answer before all operations,
+
+Then print one more answer after each operation denoting the dynamic "acidity".
+
+Yes, as the writer is too lazy, we didn't encrypt the input data in any way, help yourself if you can solve this problem by some off line way :)
+
+
+\InputFile
+The first line contain a integer $T$ (no morn than 10), the following is $T$ test case, for each test case :
+
+The first line,two integers n and m, satisfying $2 \le n \le 100000,1 < m \le 100000$.
+
+The second line consists n integers whose absolute values are not greater than 100000.
+
+Next m lines,each would be shown like U i x,$1 \le i < n,|x| \le 100000$,which denotes a modifying operation. 
+
+\OutputFile
+Print m+1 answers one perline denoting the dynamic "acidity" of the given array.
+
+\Example
+
+\begin{example}
+\exmp{1
+20 10
+-63541 0 -59055 -41170 0 0 0 -21343 25072 0 -76818 -59156 0 4435 59829 0 0 -56094 0 0
+U 5 -62470
+U 13 -52045
+U 18 95988
+U 13 -76265
+U 7 35037
+U 6 -41898
+U 8 -71979
+U 18 48427
+U 16 -4208
+U 15 34206
+}{15
+12
+11
+9
+9
+7
+6
+6
+6
+4
+3
+}%
+\end{example}
+
+\Note
+you may need fast io.
+
+\end{problem}
+
