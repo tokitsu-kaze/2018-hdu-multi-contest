@@ -1,4 +1,4 @@
-# 2018-hdu-multi
+# 2018-hdu-multi-contest
 2018 HDU Multi-University Training Contest
 
 1.statements
